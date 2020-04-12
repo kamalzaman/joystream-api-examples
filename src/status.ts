@@ -39,7 +39,7 @@ async function main () {
   // number of council members
   console.log('Council size:', council.length)
 
-  console.log('Validator count:', validators.length);
+  console.log('Validator count:', validators.list);
 
   if (validators && validators.length > 0) {
     // Retrieve the balances for all validators
