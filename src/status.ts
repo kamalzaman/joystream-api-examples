@@ -53,6 +53,13 @@ async function main () {
     console.log('Total Validator Stake:', totalValidatorBalances.toString());
   }
 
+      // Print out the authorityIds and balances of all validators
+    console.log('validators', validators.map((authorityId, index) => ({
+      address: authorityId.toString(),
+      balance: validatorBalances[index].data.free.toHuman(),
+      nonce: validatorBalances[index].nonce.toHuman()
+    })));
+  
   api.disconnect();
 }
 
